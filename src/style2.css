@@ -1,0 +1,188 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 730px;
+    height:100%vh;
+    background-image: url("../resources/wall.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-color: azure;
+    /* overflow: auto; */
+    background-color: rgb(0, 0, 0);
+}
+
+.options-table {
+    background-color: rgba(94, 123, 182, 0.56);
+    border-style: solid;
+    border-color: bisque;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5%;
+}
+
+.title {
+    font-size: xx-large;
+    text-decoration: underline;
+    background-color: rgba(22, 22, 202, 0.137);
+    border-radius: 6%;
+    margin: 4px 7px;
+}
+
+.options-table div {
+    padding: 10px 30px;
+}
+
+
+
+#saved-game {
+    font-size: x-large;
+}
+
+
+#last-results {
+    font-size: xx-large;
+    height: 300px;
+    overflow: auto;
+}
+
+
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+    border: 3px solid rgb(218, 193, 193);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+td{
+    /* width:inherit; */
+
+    width: 70px;
+    height: 70px;
+
+    border: 0.5px solid rgb(79, 63, 63);
+    background-color: rgb(255, 255, 255);
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+.topnav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 80px;
+
+    background-color: rgb(85, 85, 84);
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    color: white;
+}
+
+#board-btns {}
+
+#time {
+    color: white;
+}
+
+.flex-v {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#nameError {
+    display: none;
+    font-size: 0.8em;
+}
+
+#nameError.visible {
+    display: block;
+}
+
+input.invalid {
+    border-color: red;
+}
+
+.end-of-game {
+    border: 5px solid gold;
+    font-size: x-large;
+    padding: 10px;
+  }
+.game-board-container{
+    width:fit-content;
+    height:fit-content;
+}
+ul * {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    padding: 3px;
+}
+#custome-dim-input{
+    display: grid;
+    height: 300px;
+    width: 380px;
+    /* width: 100%; */
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;      
+}
+#custome-dim-input input{
+    background-color: rgb(196, 218, 218);
+    width: 97%;
+}
+    #custome-dim-input button{
+    width: 100%;
+    background-color: hsl(253, 85%, 47%);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#start-custome-game{
+    width: 100%;
+    background-color: hsl(253, 85%, 47%);
+
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+} 

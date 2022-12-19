@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title> Light bulb placement</title>
+</head>
+<body>
+    <div class="map-selecor-container">
+        <div class="options-table">
+            <div class="title">
+                <strong> Light bulb placement</strong>
+            </div>
+            <div>
+                <div>
+                    <fieldset>
+                        <legend>Name</legend>
+                        <input style="height: 20px;" type="text" maxlength="10" id="name" placeholder="Enter your name">
+                        <p style="color: red;" hidden>max name's length is 10 hidden </p>
+                        <span role="alert" id="nameError" aria-hidden="true">
+                            Please enter First Name
+                        </span>
+                    </fieldset>
+                </div>
+                <div id="options">
+                    Level:
+                    <select name="levels" id="levels">
+                        <option>Easy </option>
+                        <option>Advanced</option>
+                        <option>Extreme </option>
+                        <option>Custome</option>
+                    </select>
+                    <br>
+                </div>
+
+            </div>
+            <div>
+                <button id="start-game-button">Start Game</button>
+            </div>
+            ------------------------------------------------------
+            <div id="saved-game"> <strong> Last game:</strong>
+                <section id="last-game-results" style="font-size:large ;">Abdullah -- Easy -- 123 minuts</section>
+            </div>
+
+            <button id="Resume">Resume</button>
+            ------------------------------------------------------
+            <div id="more-options">
+                <button id="results-button">Resultes</button>
+                <button id="about">About The Game</button>
+            </div>
+        </div>
+    </div>
+    <div id="about-container" hidden>
+        <div class="options-table">
+            <div class="title">
+                <strong>Light Bulb Placement</strong>
+            </div>
+            <div style="max-width : 500px;">
+                <ul>
+                    <li>The king's palace has rooms with square shaped floors that consist of black and white tiles
+                        only.</li>
+                    <li>Light bulbs can only be placed above white tiles.</li>
+                    <li>The light from the light bulbs does not spread diagonally, only straight along the given row and
+                        column.</li>
+                    <li>The black tiles have objects placed on them, which block the propagation of light.</li>
+                    <li>Black cells can optionally contain an integer from 0 to 4. This indicates how many adjacent
+                        (bottom, top, right, left) cells contain light bulbs.
+                        If there is such a number, the puzzle must be solved accordingly!</li>
+                    <li>Two light bulbs can NEVER illuminate each other!</li>
+                    <li>The goal of the game is to place the light bulbs so that all the white tiles are illuminated.
+                    </li>
+                </ul>
+            </div>
+            <button id="back-btn">Back</button>
+        </div>
+    </div>
+    <div id="custome-dim-input-container" hidden>
+        <div id="custome-dim-input" >
+        <label class="title" style="color:white">Custom Game</label>
+        <input type="number" placeholder="columns" min="1" >
+        <input type="number" placeholder="rows" min="1" >
+        <button>Proceed </button>
+        </div>
+    </div>
+    <div id="results-info-container" style="min-width: 370px;" hidden>
+        <div class="options-table">
+            <div class="title">
+                <strong>Results</strong>
+            </div>
+            <div id="last-results">
+            </div>
+            <button id="back">Back</button>
+        </div>
+    </div>
+    <div class="game-board-container" hidden>
+        <div id="topnav">
+            <div class="topnav">
+                <p id="player-name" style="color:white">Abdullah</p>
+                <section id="board-btns">
+                    <a id="Save">Save</a>
+                    <a id="Restart">Restart</a>
+                    <a id="Menu">Menu</a>
+                </section>
+                <p id="time">Time 12:65</p>
+            </div>
+        </div>
+        <div>
+            <table id="custome-table" hidden></table>
+            <button id="start-custome-game" hidden>start custom game</button>
+        </div>
+        <div>
+            <table id="normal-table">
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+    <div id="win" hidden>
+        <div class="end-of-game options-table">
+            <span>You Solved The Puzzle!</span>
+            <button>Play again!</button>
+        </div>
+    </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
